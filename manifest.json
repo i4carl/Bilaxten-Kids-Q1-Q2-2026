@@ -1,0 +1,35 @@
+{
+    "version": "1",
+    "bookmarks": [
+        {
+            "eventId": "1",
+            "type": "PAGE",
+            "page": "1"
+        },
+        {
+            "eventId": "2",
+            "type": "PAGE",
+            "page": "2"
+        },
+        {
+            "eventId": "3",
+            "type": "PAGE",
+            "page": "3"
+        },
+        {
+            "eventId": "4",
+            "type": "PAGE",
+            "page": "4"
+        },
+        {
+            "eventId": "5",
+            "type": "PAGE",
+            "page": "5"
+        },
+        {
+            "eventId": "6",
+            "type": "PAGE",
+            "page": "6"
+        }
+    ]
+}

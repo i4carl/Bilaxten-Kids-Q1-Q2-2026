@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.link-bt a {
+	border: none !important;
+}
+
+.container {
+	width: 100% !important;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto
+}
+
+a {
+	transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+	color: #444;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+.page-bg
+{
+	background: url(../img/uvavo-pro/page-1/bg.png) no-repeat;
+    background-size: cover;
+    height: 684px;
+    position: relative;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+/* ********************Sidebar*************** */

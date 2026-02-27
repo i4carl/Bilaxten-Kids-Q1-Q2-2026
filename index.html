@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1" />
+
+    <base href="." />
+    <title> Menarini Bilaxten Pedia EDA </title>
+    <link rel="stylesheet" href="./jquery/jquery.css" />
+    <script src="./jquery/jquery.js"></script>
+    <script src="./jquery/jquery-mobile.js"></script>
+    <script>
+        $.mobile.pushStateEnabled = false;
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="./assets/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/animate.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
+    <link rel="stylesheet" href="./assets/css/tree.css" />
+    <link href="./assets/fancybox-master/dist/jquery.fancybox.css" rel="stylesheet" />
+</head>
+<style>
+    * { margin: 0; padding: 0; }
+
+    body { height: 100vh; overflow: hidden; }
+
+    :root {
+        --width: 1024;
+        --height: 768;
+    }
+
+    /* Animations */
+
+    .fade-in {
+        opacity: 0; /* Initially invisible */
+        animation: fadeIn 1s ease-in forwards; /* Apply animation */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes moveLeft {
+         0% {
+            transform: translateX(150%); /* Start from left */
+        }
+        100% {
+            transform: translateX(0); /* Move to the right */
+        }
+    }
+
+    @keyframes moveRight {
+         0% {
+            transform: translateX(-150%); /* Start from left */
+        }
+        100% {
+            transform: translateX(0); /* Move to the right */
+        }
+    }
+
+    @keyframes moveDown {
+         0% {
+            transform: translateY(-300px); 
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveUp {
+         0% {
+            transform: translateY(300px); 
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @media screen and (width: 1024px) and (height: 768px) {
+        .description-one, .description-two {
+            top: calc((621/var(--height)) * 100vh) !important; 
+        }            
+
+        .phmat-text-pos {
+            top: calc((672/var(--height)) * 100vh) !important;
+        }
+    }
+
+    @keyframes shakeBoy {
+        0%, 100%   { transform: translateX(0); }
+        50%        { transform: translateX(-50px); }
+    }
+
+    @keyframes shakeGirl {
+        0%, 100%   { transform: translateX(0); }
+        50%        { transform: translateX(50px); }
+    }
+
+    .shakeBoy {
+        animation: shakeBoy 1s ease;
+    }
+
+    .shakeGirl {
+        animation: shakeGirl 1s ease;
+    }
+
+</style>
+<body>
+    <div data-role="page" id="page1" data-md-event-id="1" class="pagebg-1" data-prev="0" data-next="2">
+        <div data-role="content" class="row">
+            <!-- Header -->
+            <img style="
+                position: absolute;
+                top: calc((-2/var(--height)) * 100vh); 
+                left: calc((-1/var(--width)) * 100vw);
+                width: calc((1025/var(--width)) * 100vw);
+                height: calc((89/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-bg.png"
+            />
+
+            <!-- <img style="
+                position: absolute;
+                top: calc((37/var(--height)) * 100vh); 
+                left: calc((394/var(--width)) * 100vw);
+                width: calc((183/var(--width)) * 100vw);
+                height: calc((26/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset 6.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                top: calc((5.8/var(--height)) * 100vh); 
+                left: calc((602/var(--width)) * 100vw);
+                width: calc((242/var(--width)) * 100vw);
+                height: calc((80/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset_15_-_Copy-removebg-preview.png"
+            />
+            
+
+            <img style="
+                position: absolute;
+                top: calc((9.7/var(--height)) * 100vh); 
+                left: calc((867/var(--width)) * 100vw);
+                width: calc((120/var(--width)) * 100vw);
+                height: calc((67/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-fruits.png"
+            />
+
+                <!-- Body -->
+                <img style="
+                    position: absolute;
+                    top: calc((153/var(--height)) * 100vh); 
+                    left: calc((70/var(--width)) * 100vw);
+                    width: calc((380/var(--width)) * 100vw);
+                    height: calc((72/var(--height)) * 100vh);
+                    animation-delay: 0.5s;
+                "
+                    src="./assets/img/cover/ideal-text.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((264/var(--height)) * 100vh); 
+                    left: calc((70/var(--width)) * 100vw);
+                    width: calc((393/var(--width)) * 100vw);
+                    height: calc((51/var(--height)) * 100vh);
+                    animation-delay: 1s;
+                "
+                    src="./assets/img/cover/convenient-text.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((355/var(--height)) * 100vh); 
+                    left: calc((70/var(--width)) * 100vw);
+                    width: calc((360/var(--width)) * 100vw);
+                    height: calc((72/var(--height)) * 100vh);
+                    animation-delay: 1.5s;
+                "
+                    src="./assets/img/cover/recommended-text.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((507/var(--height)) * 100vh); 
+                    left: calc((-5/var(--width)) * 100vw);
+                    width: calc((267/var(--width)) * 100vw);
+                    height: calc((227/var(--height)) * 100vh);
+                "
+                    src="./assets/img/cover/family-gazing.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((123/var(--height)) * 100vh); 
+                    left: calc((540/var(--width)) * 100vw);
+                    width: calc((421/var(--width)) * 100vw);
+                    height: calc((490/var(--height)) * 100vh);
+                "
+                    src="./assets/img/cover/kids-studying.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((647/var(--height)) * 100vh); 
+                    left: calc((250/var(--width)) * 100vw);
+                    width: calc((744/var(--width)) * 100vw);
+                    height: calc((15/var(--height)) * 100vh);
+                "
+                    src="./assets/img/cover/page1-ref.png"
+                />
+
+                <!-- <img style="
+                    position: absolute;
+                    top: calc((638/var(--height)) * 100vh); 
+                    left: calc((253/var(--width)) * 100vw);
+                    width: calc((744/var(--width)) * 100vw);
+                "
+                    src="./assets/img/cover/Asset 3.png"
+                /> -->
+        </div>
+    </div>
+    <div data-role="page" id="page2" data-md-event-id="2" class="pagebg-2" data-prev="1" data-next="3">
+        <div data-role="content" class="row">
+            <!-- Header -->
+            <img style="
+                position: absolute;
+                top: calc((-2/var(--height)) * 100vh); 
+                left: calc((-1/var(--width)) * 100vw);
+                width: calc((1025/var(--width)) * 100vw);
+                height: calc((89/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-bg.png"
+            />
+
+            <!-- <img style="
+                position: absolute;
+                top: calc((37/var(--height)) * 100vh); 
+                left: calc((394/var(--width)) * 100vw);
+                width: calc((183/var(--width)) * 100vw);
+                height: calc((26/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset 6.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                top: calc((5.8/var(--height)) * 100vh); 
+                left: calc((602/var(--width)) * 100vw);
+                width: calc((242/var(--width)) * 100vw);
+                height: calc((80/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset_15_-_Copy-removebg-preview.png"
+            />
+            
+            <img style="
+                position: absolute;
+                top: calc((9.7/var(--height)) * 100vh); 
+                left: calc((867/var(--width)) * 100vw);
+                width: calc((120/var(--width)) * 100vw);
+                height: calc((67/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-fruits.png"
+            />
+
+                <!-- Body -->
+                <img style="
+                    position: absolute;
+                    top: calc((103/var(--height)) * 100vh); 
+                    left: calc((135/var(--width)) * 100vw);
+                    width: calc((750/var(--width)) * 100vw);
+                    animation-delay: 1s;
+                "
+                    src="./assets/img/page2/recommended.png"
+                    class="fade-in"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((210/var(--height)) * 100vh); 
+                    left: calc((140/var(--width)) * 100vw);
+                    width: calc((750/var(--width)) * 100vw);
+                "
+                    src="./assets/img/page2/second-generation.png"
+                />
+
+                    <img style="
+                        position: absolute;
+                        top: calc((300/var(--height)) * 100vh); 
+                        left: calc((160/var(--width)) * 100vw);
+                        width: calc((350/var(--width)) * 100vw);
+                        height: calc((335/var(--height)) * 100vh);
+                    "
+                        src="./assets/img/page2/note-1-orig.png"
+                    />
+
+                    <img style="
+                        position: absolute;
+                        top: calc((260/var(--height)) * 100vh); 
+                        left: calc((50/var(--width)) * 100vw);
+                        width: calc((180/var(--width)) * 100vw);
+                        height: calc((175/var(--height)) * 100vh);
+                        transform: translateX(-150%);
+                        animation: moveRight 1.5s ease-in-out 1s forwards;
+                    "
+                        src="./assets/img/page2/nose1.png"
+                    />
+
+                        <img style="
+                            position: absolute;
+                            top: calc((310/var(--height)) * 100vh); 
+                            left: calc((480/var(--width)) * 100vw);
+                            width: calc((360/var(--width)) * 100vw);
+                            height: calc((350/var(--height)) * 100vh);
+                        "
+                            src="./assets/img/page2/note2.png"
+                        />
+
+                        <img style="
+                            position: absolute;
+                            top: calc((410/var(--height)) * 100vh); 
+                            left: calc((770/var(--width)) * 100vw);
+                            width: calc((180/var(--width)) * 100vw);
+                            height: calc((186/var(--height)) * 100vh);
+                            transform: translateX(150%);
+                            animation: moveLeft 1.5s ease-in-out 2s forwards;
+                        "
+                            src="./assets/img/page2/nose2.png"
+                        />
+
+
+                <img style="
+                    position: absolute;
+                    top: calc((600/var(--height)) * 100vh); 
+                    left: calc((900/var(--width)) * 100vw);
+                    width: calc((70/var(--width)) * 100vw);
+                    height: calc((70/var(--height)) * 100vh);
+                "
+                    src="./assets/img/page2/men-logo.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((650/var(--height)) * 100vh); 
+                    left: calc((50/var(--width)) * 100vw);
+                    width: calc((467/var(--width)) * 100vw);
+                "
+                    src="./assets/img/page2/page2-references-small_1.png"
+                />
+        </div>
+    </div>
+    <div data-role="page" id="page3" data-md-event-id="3" class="pagebg-3" data-prev="2" data-next="4">
+        <div data-role="content" class="row">
+            <!-- Header -->
+            <img style="
+                position: absolute;
+                top: calc((-2/var(--height)) * 100vh); 
+                left: calc((-1/var(--width)) * 100vw);
+                width: calc((1025/var(--width)) * 100vw);
+                height: calc((89/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/header-bg.png"
+            />
+
+            <!-- <img style="
+                position: absolute;
+                top: calc((37/var(--height)) * 100vh); 
+                left: calc((394/var(--width)) * 100vw);
+                width: calc((183/var(--width)) * 100vw);
+                height: calc((26/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/Asset 6.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                top: calc((5.8/var(--height)) * 100vh); 
+                left: calc((602/var(--width)) * 100vw);
+                width: calc((242/var(--width)) * 100vw);
+                height: calc((80/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/Asset_15_-_Copy-removebg-preview.png"
+            />
+            
+            <img style="
+                position: absolute;
+                top: calc((9.7/var(--height)) * 100vh); 
+                left: calc((867/var(--width)) * 100vw);
+                width: calc((120/var(--width)) * 100vw);
+                height: calc((67/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/header-fruits.png"
+            />
+
+                <!-- Body -->
+                <img style="
+                    position: absolute;
+                    top: calc((-28/var(--height)) * 100vh); 
+                    left: calc((-26/var(--width)) * 100vw);
+                    width: calc(1073/var(--width) * 100vw);
+                    height:calc(688/var(--height) * 100vh);
+                "
+                    src="assets/img/page3/page3-static.png"
+                />
+
+                <!-- <img style="
+                    position: absolute;
+                    top: calc((169/var(--height)) * 100vh); 
+                    left: calc((50/var(--width)) * 100vw);
+                    width: calc(473/var(--width) * 100vw);
+                    height:calc(296/var(--height) * 100vh);
+                    animation-delay: 1s;
+                "
+                    src="assets/img/page3/cartoons.png"
+                    class="shake"
+                /> -->
+
+                <img style="
+                    position: absolute;
+                    top: calc((169/var(--height)) * 100vh); 
+                    left: calc((50/var(--width)) * 100vw);
+                    width: calc(273/var(--width) * 100vw);
+                    height:calc(296/var(--height) * 100vh);
+                    animation-delay: 1s;
+                "
+                    src="assets/img/page3/cartoons-boy.png"
+                    class="shakeBoy"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((169/var(--height)) * 100vh); 
+                    left: calc((270/var(--width)) * 100vw);
+                    width: calc(273/var(--width) * 100vw);
+                    height:calc(296/var(--height) * 100vh);
+                    animation-delay: 2s;
+                "
+                    src="assets/img/page3/cartoons-girl.png"
+                    class="shakeGirl"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((373/var(--height)) * 100vh); 
+                    left: calc((-4/var(--width)) * 100vw);
+                    width: calc(534/var(--width) * 100vw);
+                    height:calc(266/var(--height) * 100vh);
+                "
+                    src="assets/img/page3/bilaxtine-image.png"
+                />
+        </div>
+    </div>
+    <div data-role="page" id="page4" data-md-event-id="4" class="pagebg-4" data-prev="3" data-next="5">
+        <div data-role="content" class="row">
+            <!-- Header -->
+            <img style="
+                position: absolute;
+                top: calc((-2/var(--height)) * 100vh); 
+                left: calc((-1/var(--width)) * 100vw);
+                width: calc((1025/var(--width)) * 100vw);
+                height: calc((89/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/header-bg.png"
+            />
+
+            <!-- <img style="
+                position: absolute;
+                top: calc((37/var(--height)) * 100vh); 
+                left: calc((394/var(--width)) * 100vw);
+                width: calc((183/var(--width)) * 100vw);
+                height: calc((26/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/Asset 6.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                top: calc((5.8/var(--height)) * 100vh); 
+                left: calc((602/var(--width)) * 100vw);
+                width: calc((242/var(--width)) * 100vw);
+                height: calc((80/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/Asset_15_-_Copy-removebg-preview.png"
+            />
+            
+            <img style="
+                position: absolute;
+                top: calc((9.7/var(--height)) * 100vh); 
+                left: calc((867/var(--width)) * 100vw);
+                width: calc((120/var(--width)) * 100vw);
+                height: calc((67/var(--height)) * 100vh);
+                z-index: 999;
+            "
+                src="./assets/img/cover/header-fruits.png"
+            />
+
+                <!-- Body -->
+                <img style="
+                    position: absolute;
+                    top: calc((-28/var(--height)) * 100vh); 
+                    left: calc((-26/var(--width)) * 100vw);
+                    width: calc((1073/var(--width)) * 100vw);
+                    height: calc((706/var(--height)) * 100vh);
+                "
+                    src="./assets/img/page4/page4-static.png"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((181/var(--height)) * 100vh); 
+                    left: calc((-5/var(--width)) * 100vw);
+                    width: calc((296/var(--width)) * 100vw);
+                    height: calc((255/var(--height)) * 100vh);
+                    animation-delay: 1s;
+                "
+                    src="./assets/img/page4/frame1.png"
+                    class="fade-in"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((224/var(--height)) * 100vh); 
+                    left: calc((138/var(--width)) * 100vw);
+                    width: calc((276/var(--width)) * 100vw);
+                    height: calc((265/var(--height)) * 100vh);
+                    animation-delay: 1.5s;
+                "
+                    src="./assets/img/page4/frame2.png"
+                    class="fade-in"
+                />
+
+                <img style="
+                    position: absolute;
+                    top: calc((384/var(--height)) * 100vh); 
+                    left: calc((46/var(--width)) * 100vw);
+                    width: calc((375/var(--width)) * 100vw);
+                    height: calc((217/var(--height)) * 100vh);
+                "
+                    src="./assets/img/page4/bilastine-image.png"
+                />
+
+        </div>
+    </div>
+    <div data-role="page" id="page5" data-md-event-id="5" class="pagebg-5" data-prev="4" data-next="6">
+        <div data-role="content" class="row">
+            <!-- Header -->
+            <img style="
+                position: absolute;
+                top: calc((-2/var(--height)) * 100vh); 
+                left: calc((-1/var(--width)) * 100vw);
+                width: calc((1025/var(--width)) * 100vw);
+                height: calc((89/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-bg.png"
+            />
+
+            <!-- <img style="
+                position: absolute;
+                top: calc((37/var(--height)) * 100vh); 
+                left: calc((394/var(--width)) * 100vw);
+                width: calc((183/var(--width)) * 100vw);
+                height: calc((26/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset 6.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                top: calc((5.8/var(--height)) * 100vh); 
+                left: calc((602/var(--width)) * 100vw);
+                width: calc((242/var(--width)) * 100vw);
+                height: calc((80/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset_15_-_Copy-removebg-preview.png"
+            />
+            
+            <img style="
+                position: absolute;
+                top: calc((9.7/var(--height)) * 100vh); 
+                left: calc((867/var(--width)) * 100vw);
+                width: calc((120/var(--width)) * 100vw);
+                height: calc((67/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-fruits.png"
+            />
+
+                <!-- Body -->
+                <img style="
+                    position: absolute;
+                    top: calc((225/var(--height)) * 100vh); 
+                    left: calc((30/var(--width)) * 100vw);
+                    width: calc((962/var(--width)) * 100vw);
+                "
+                    src="./assets/img/page5/references.png"
+                />
+        </div>
+    </div>
+    <div data-role="page" id="page6" data-md-event-id="6" class="pagebg-6" data-prev="5" data-next="">
+        <div data-role="content" class="row">
+            <!-- Header -->
+            <img style="
+                position: absolute;
+                top: calc((-2/var(--height)) * 100vh); 
+                left: calc((-1/var(--width)) * 100vw);
+                width: calc((1025/var(--width)) * 100vw);
+                height: calc((89/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-bg.png"
+            />
+
+            <!-- <img style="
+                position: absolute;
+                top: calc((37/var(--height)) * 100vh); 
+                left: calc((394/var(--width)) * 100vw);
+                width: calc((183/var(--width)) * 100vw);
+                height: calc((26/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset 6.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                top: calc((5.8/var(--height)) * 100vh); 
+                left: calc((602/var(--width)) * 100vw);
+                width: calc((242/var(--width)) * 100vw);
+                height: calc((80/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/Asset_15_-_Copy-removebg-preview.png"
+            />
+            
+            <img style="
+                position: absolute;
+                top: calc((9.7/var(--height)) * 100vh); 
+                left: calc((867/var(--width)) * 100vw);
+                width: calc((120/var(--width)) * 100vw);
+                height: calc((67/var(--height)) * 100vh);
+            "
+                src="./assets/img/cover/header-fruits.png"
+            />
+
+                <!-- Body -->
+                <img style="
+                    position: absolute;
+                    top: calc((105/var(--height)) * 100vh); 
+                    left: calc((52/var(--width)) * 100vw);
+                    width: calc((921/var(--width)) * 100vw);
+                    height: calc((548/var(--height)) * 100vh);
+                "
+                    src="./assets/img/page6/API.png"
+                />
+        </div>
+    </div>
+
+    <!-- Modal content-->
+    <div class="clearfix"></div>
+    <div class="bottom-bar">
+        <div class="left-actions">
+            <div class="button-action">
+
+                <img id="sidepanel-btn" srcset="
+              assets/thumbnail-panel.png,
+              assets/thumbnail-panel@2x.png 2x
+            " src="assets/thumbnail-panel.png" style="cursor: pointer;"/>
+            </div>
+            <div class="button-action">
+                <img onclick="goToPage(1);"  srcset="assets/safety-panel.png, assets/safety-panel@2x.png 2x"
+                    src="assets/safety-panel.png" style="cursor: pointer;"/>
+            </div>
+            <div class="button-action">
+                <img onclick="goToPage(5);"  srcset="assets/biblio-panel.png, assets/biblio-panel@2x.png 2x"
+                    src="assets/biblio-panel.png" style="cursor: pointer;"/>
+            </div>
+            <!-- <div class="button-action">
+                <img   srcset="assets/new.png, assets/new@2x.png 2x"
+                    src="assets/new.png" onclick="goToNextPage()" style="opacity: 0; cursor: pointer;" />
+            </div> -->
+        </div>
+        <div class="center">
+            <div class="logo">
+                <img src="assets/Menarini.svg" />
+            </div>
+        </div>
+        <div class="right-actions">
+            <!-- <img style="
+                position: absolute;
+                width: calc((80/var(--width)) * 100vw);
+                left: calc((662/var(--width)) * 100vw);
+            "
+                src="./assets/img/cover/footer-youcanwith.png"
+            /> -->
+
+            <img style="
+                position: absolute;
+                width: calc((175/var(--width)) * 100vw);
+                left: calc((760/var(--width)) * 100vw);
+                cursor: pointer;
+            "
+                src="./assets/img/cover/footer-logo.png"
+                onclick="goToPage(3)"
+            />
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="tree">
+            <ul>
+                <li>
+                    <span class="page1">
+                        <img onclick="goToPage(1);" class="img-responsive" src="thumbnails/1.png" />
+                    </span>
+                </li>
+                <li>
+                    <span class="page2">
+                        <img onclick="goToPage(2);" class="img-responsive" src="thumbnails/2.png" />
+                    </span>
+                </li>
+                <li>
+                    <span class="page3">
+                        <img onclick="goToPage(3);" class="img-responsive" src="thumbnails/3.png" />
+                    </span>
+                </li>
+                <li>
+                    <span class="page4">
+                        <img onclick="goToPage(4);" class="img-responsive" src="thumbnails/4.png" />
+                    </span>
+                </li>
+                <li>
+                    <span class="page5">
+                        <img onclick="goToPage(5);" class="img-responsive" src="thumbnails/5.png" />
+                    </span>
+                </li>
+                <li>
+                    <span class="page6">
+                        <img onclick="goToPage(6);" class="img-responsive" src="thumbnails/6.png" />
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="tracking-lib.js"></script>
+    <script src="main.js"></script>
+    <script src="manifest.json"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/fancybox-master/dist/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="./assets/js/custom.js"></script>
+    <script type="text/javascript" src="./assets/js/search.js"></script>
+</body>
+</html>
