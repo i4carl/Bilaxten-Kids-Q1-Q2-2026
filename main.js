@@ -90,11 +90,20 @@ $(document).on('click', 'img[src="assets/img/global/ArrowLeft.png"], img[src="as
 
 var pagedescription = [
   "Cover Page",
-  "RECOMMENDED",
+  "Patient Profile for AR",
+  "Treatment Requirements",
+  "Why Bilastine for Kylie?",
+  "Convenience",
+  "Efficacy",
+  "Safety & Tolerability",
+  "Safety & Tolerability",
+  "IDEAL OAH based on ARIA and EAACI guideline recommendations",
   "Bilaxten KIDS",
   "Bilaxten 20mg",
-  "References",
-  "Abridged Product Information"
+  "Brand Summary",
+  "Abridged Product Information",
+  "Abridged Product Information",
+  "Reference"
 ];
 
 function trackPageChange(currentPage) {
